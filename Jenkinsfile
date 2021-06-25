@@ -3,8 +3,8 @@ pipeline {
   stages {
     stage ('Update OS') {
       steps {
-        //sh 'sudo apt update -y' 
-	//sh 'sudo apt upgrade -y' 
+        sh 'apt update -y' 
+	sh 'apt upgrade -y' 
 	sh 'sudo apt autoremove -y' 
 	sh 'sudo apt install default-jre default-jdk'
       }
