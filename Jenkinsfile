@@ -3,10 +3,10 @@ pipeline {
   stages {
     stage ('Update OS') {
       steps {
-        sh 'apt update -y' 
-	sh 'apt upgrade -y' 
-	sh 'sudo apt autoremove -y' 
-	sh 'sudo apt install default-jre default-jdk'
+        sh 'sudo apt update -y' 
+		sh 'sudo apt upgrade -y' 
+		sh 'sudo apt autoremove -y' 
+		sh 'sudo apt -y install default-jre default-jdk'
       }
     }
     stage ("Install jenkins") {
