@@ -15,6 +15,7 @@ pipeline {
 		sh 'sudo apt upgrade -y'
 		sh 'sudo mv /usr/share/jenkins/jenkins.war /usr/share/jenkins/jenkins.war.old'
 		sh 'sudo wget https://updates.jenkins-ci.org/latest/jenkins.war'
+	      	sh 'sudo cp jenkins.war /usr/share/jenkins/'
 		sh 'sudo systemctl restart jenkins'
       }
     }
